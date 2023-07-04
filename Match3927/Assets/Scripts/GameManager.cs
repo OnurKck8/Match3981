@@ -8,12 +8,7 @@ public class GameManager : MonoBehaviour
     public int Score;
     public Text Score_Tex;
     public AudioSource bubble;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+  
     void Update()
     {
         Score_Tex.text = Score.ToString();

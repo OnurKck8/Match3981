@@ -13,12 +13,6 @@ public class Items : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnMouseDown()
     {
         rb.useGravity = false;
@@ -30,12 +24,12 @@ public class Items : MonoBehaviour
     private void OnMouseDrag()
     {
        
-            Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, ScreenPoint.z);
-            Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + Offset;
+        Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, ScreenPoint.z);
+        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + Offset;
         cursorPosition.x = Mathf.Clamp(cursorPosition.x, -1.8f, 1.8f);
         cursorPosition.z = Mathf.Clamp(cursorPosition.z, -4.9f, 2.4f);
         rb.position = cursorPosition;
-            rb.MovePosition(new Vector3(rb.position.x, 0.7f, rb.position.z));
+        rb.MovePosition(new Vector3(rb.position.x, 0.7f, rb.position.z));
 
         
 
